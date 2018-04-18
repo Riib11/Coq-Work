@@ -1,0 +1,71 @@
+DIGEST 39ce658078873dc12e924431f243d43b
+FTop.naturals
+ind 10:12 <> nat
+constr 27:27 <> O
+constr 39:39 <> S
+R31:33 Top.naturals <> nat ind
+R46:49 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R50:52 Top.naturals <> nat ind
+R43:45 Top.naturals <> nat ind
+def 65:68 <> plus
+R77:79 Top.naturals <> nat ind
+R84:86 Top.naturals <> nat ind
+R99:99 Top.naturals <> m var
+R112:112 Top.naturals <> O constr
+R123:123 Top.naturals <> n var
+R140:140 Top.naturals <> O constr
+R145:145 Top.naturals <> O constr
+R157:157 Top.naturals <> S constr
+R165:165 Top.naturals <> S constr
+R186:186 Top.naturals <> S constr
+R200:200 Top.naturals <> n var
+R217:217 Top.naturals <> O constr
+R222:222 Top.naturals <> S constr
+R237:237 Top.naturals <> S constr
+R245:245 Top.naturals <> S constr
+R248:248 Top.naturals <> S constr
+R251:254 Top.naturals <> plus def
+prf 290:300 <> S_injective
+R317:319 Top.naturals <> nat ind
+R331:334 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R336:338 Coq.Init.Logic <> :type_scope:x_'='_x not
+R335:335 Top.naturals <> m var
+R339:339 Top.naturals <> n var
+R325:327 Coq.Init.Logic <> :type_scope:x_'='_x not
+R322:322 Top.naturals <> S constr
+R324:324 Top.naturals <> m var
+R328:328 Top.naturals <> S constr
+R330:330 Top.naturals <> n var
+prf 382:390 <> O_left_id
+R405:407 Top.naturals <> nat ind
+R418:420 Coq.Init.Logic <> :type_scope:x_'='_x not
+R410:413 Top.naturals <> plus def
+R417:417 Top.naturals <> m var
+R415:415 Top.naturals <> O constr
+R421:421 Top.naturals <> m var
+prf 553:562 <> O_right_id
+R577:579 Top.naturals <> nat ind
+R590:592 Coq.Init.Logic <> :type_scope:x_'='_x not
+R582:585 Top.naturals <> plus def
+R589:589 Top.naturals <> O constr
+R587:587 Top.naturals <> m var
+R593:593 Top.naturals <> m var
+prf 727:730 <> O_id
+R745:747 Top.naturals <> nat ind
+R762:765 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R758:760 Coq.Init.Logic <> :type_scope:x_'='_x not
+R750:753 Top.naturals <> plus def
+R757:757 Top.naturals <> m var
+R755:755 Top.naturals <> O constr
+R761:761 Top.naturals <> m var
+R774:776 Coq.Init.Logic <> :type_scope:x_'='_x not
+R766:769 Top.naturals <> plus def
+R773:773 Top.naturals <> O constr
+R771:771 Top.naturals <> m var
+R777:777 Top.naturals <> m var
+R800:803 Coq.Init.Logic <> conj constr
+R800:803 Coq.Init.Logic <> conj constr
+R821:829 Top.naturals <> O_left_id thm
+R821:829 Top.naturals <> O_left_id thm
+R842:851 Top.naturals <> O_right_id thm
+R842:851 Top.naturals <> O_right_id thm

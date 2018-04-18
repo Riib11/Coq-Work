@@ -17,4 +17,10 @@ Theorem plus_n_O : (forall n : nat, n + 0 = n).
 Proof.
   intros n.
   simpl.
-  Abort. (* need to use rewriting *)
+  induction n.
+    simpl.
+    auto.
+    simpl.
+    rewrite IHn.
+    auto.
+Qed.

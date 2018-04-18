@@ -1,0 +1,73 @@
+DIGEST b6b385cf6293e6b9327aad08ce6fb62f
+FTop.parameterizedtypes
+ind 10:13 <> bool
+constr 28:31 <> true
+constr 37:41 <> false
+R32:32 Top.parameterizedtypes <> bool ind
+R42:42 Top.parameterizedtypes <> bool ind
+ind 55:57 <> nat
+constr 72:72 <> O
+constr 84:84 <> S
+R76:78 Top.parameterizedtypes <> nat ind
+R91:94 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R95:97 Top.parameterizedtypes <> nat ind
+R88:90 Top.parameterizedtypes <> nat ind
+def 112:115 <> pred
+R122:124 Top.parameterizedtypes <> nat ind
+R129:131 Top.parameterizedtypes <> nat ind
+R144:144 Top.parameterizedtypes <> n var
+R157:157 Top.parameterizedtypes <> O constr
+R162:162 Top.parameterizedtypes <> O constr
+R170:170 Top.parameterizedtypes <> S constr
+def 198:201 <> plus
+R210:212 Top.parameterizedtypes <> nat ind
+R217:219 Top.parameterizedtypes <> nat ind
+R232:232 Top.parameterizedtypes <> n var
+R245:245 Top.parameterizedtypes <> O constr
+R250:250 Top.parameterizedtypes <> m var
+R258:258 Top.parameterizedtypes <> S constr
+R266:266 Top.parameterizedtypes <> S constr
+R269:272 Top.parameterizedtypes <> plus def
+R277:277 Top.parameterizedtypes <> m var
+sec 296:299 <> list
+var 313:313 list T
+ind 335:338 <> list
+constr 353:355 <> Nil
+constr 368:371 <> Cons
+R359:362 Top.parameterizedtypes <> list ind
+R376:379 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R384:387 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R388:391 Top.parameterizedtypes <> list ind
+R380:383 Top.parameterizedtypes <> list ind
+R375:375 Top.parameterizedtypes <> list.T var
+def 406:411 <> length
+R419:422 Top.parameterizedtypes <> list ind
+R427:429 Top.parameterizedtypes <> nat ind
+R444:445 Top.parameterizedtypes <> ls var
+R460:462 Top.parameterizedtypes <> Nil constr
+R467:467 Top.parameterizedtypes <> O constr
+R477:480 Top.parameterizedtypes <> Cons constr
+R491:491 Top.parameterizedtypes <> S constr
+R494:499 Top.parameterizedtypes <> length def
+def 527:529 <> app
+R542:545 Top.parameterizedtypes <> list ind
+R550:553 Top.parameterizedtypes <> list ind
+R568:570 Top.parameterizedtypes <> ls1 var
+R585:587 Top.parameterizedtypes <> Nil constr
+R592:594 Top.parameterizedtypes <> ls2 var
+R604:607 Top.parameterizedtypes <> Cons constr
+R619:622 Top.parameterizedtypes <> Cons constr
+R627:629 Top.parameterizedtypes <> app def
+R636:638 Top.parameterizedtypes <> ls2 var
+prf 661:670 <> length_app
+R691:694 Top.parameterizedtypes <> list ind
+R717:723 Coq.Init.Logic <> :type_scope:x_'='_x not
+R697:702 Top.parameterizedtypes <> length def
+R705:707 Top.parameterizedtypes <> app def
+R713:715 Top.parameterizedtypes <> ls2 var
+R709:711 Top.parameterizedtypes <> ls1 var
+R724:727 Top.parameterizedtypes <> plus def
+R743:748 Top.parameterizedtypes <> length def
+R750:752 Top.parameterizedtypes <> ls2 var
+R730:735 Top.parameterizedtypes <> length def
+R737:739 Top.parameterizedtypes <> ls1 var

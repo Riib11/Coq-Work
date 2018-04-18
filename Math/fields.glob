@@ -1,0 +1,37 @@
+DIGEST f32dbe4d21ad42b52df82887c9e6601d
+FTop.fields
+R50:55 Coq.ZArith.ZArith <> <> lib
+R99:99 Coq.Numbers.BinNums <> Z ind
+R113:117 Coq.Init.Logic <> :type_scope:x_'='_x not
+R104:104 Coq.ZArith.BinInt <> :Z_scope:x_'^'_x not
+R110:111 Coq.ZArith.BinInt <> :Z_scope:x_'^'_x not
+R108:108 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R106:106 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R105:105 Top.fields <> a var
+R107:107 Top.fields <> b var
+R109:109 Top.fields <> c var
+R161:163 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R149:151 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R137:139 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R129:131 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R123:125 Coq.ZArith.BinInt <> :Z_scope:x_'+'_x not
+R119:121 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R118:118 Top.fields <> a var
+R122:122 Top.fields <> a var
+R127:127 Coq.ZArith.BinInt <> :Z_scope:x_'^'_x not
+R126:126 Top.fields <> b var
+R133:135 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R132:132 Top.fields <> c var
+R136:136 Top.fields <> c var
+R145:147 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R141:143 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R144:144 Top.fields <> a var
+R148:148 Top.fields <> b var
+R157:159 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R153:155 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R156:156 Top.fields <> a var
+R160:160 Top.fields <> c var
+R169:171 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R165:167 Coq.ZArith.BinInt <> :Z_scope:x_'*'_x not
+R168:168 Top.fields <> b var
+R172:172 Top.fields <> c var

@@ -1,0 +1,37 @@
+DIGEST 5884e224ae9f24632c4f64d4f7aa361c
+FTop.Sorted
+R15:24 Coq.Arith.Arith_base <> <> lib
+R35:45 Coq.Vectors.Fin <> <> lib
+ind 107:116 <> sortedlist
+constr 139:141 <> nil
+constr 162:165 <> cons
+R123:126 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R120:122 Coq.Init.Datatypes <> nat ind
+R145:154 Top.Sorted <> sortedlist ind
+R183:185 Coq.Init.Datatypes <> nat ind
+R201:204 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R211:214 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R215:224 Top.Sorted <> sortedlist ind
+R226:226 Top.Sorted <> n var
+R206:209 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R205:205 Top.Sorted <> m var
+R210:210 Top.Sorted <> n var
+R189:198 Top.Sorted <> sortedlist ind
+R200:200 Top.Sorted <> m var
+prf 238:249 <> zero_leq_all
+R265:267 Coq.Init.Datatypes <> nat ind
+R272:275 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R276:276 Top.Sorted <> m var
+R314:317 Coq.Init.Peano <> le_n constr
+R314:317 Coq.Init.Peano <> le_n constr
+R330:333 Coq.Init.Peano <> le_S constr
+R330:333 Coq.Init.Peano <> le_S constr
+prf 365:374 <> zero_leq_1
+R379:382 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R392:403 Top.Sorted <> zero_leq_all thm
+R392:403 Top.Sorted <> zero_leq_all thm
+def 423:435 <> sortedlist_01
+R439:448 Top.Sorted <> sortedlist ind
+R455:458 Top.Sorted <> cons constr
+R468:477 Top.Sorted <> zero_leq_1 thm
+R464:466 Top.Sorted <> nil constr

@@ -1,0 +1,164 @@
+\documentclass[12pt]{report}
+\usepackage[]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{coqdoc}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file has been automatically generated with the command
+%% coqdoc -q -g --latex -o AVLTree.tex AVLTree.v 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coqlibrary{AVLTree}{Library }{AVLTree}
+
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Import}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{FSetInterface}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{FMapInterface}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{FMapList}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{ZArith}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{Int}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Import} \coqdocvar{Z\_as\_Int}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Set Implicit Arguments}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Notation} "s \#1" := (\coqdocvar{fst} \coqdocvar{s}) (\coqdoctac{at} \coqdockw{level} 9, \coqdocvar{format} "s '\#1'") : \coqdocvar{pair\_scope}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Notation} "s \#2" := (\coqdocvar{snd} \coqdocvar{s}) (\coqdoctac{at} \coqdockw{level} 9, \coqdocvar{format} "s '\#2'") : \coqdocvar{pair\_scope}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{int} := \coqdocvar{Z}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{key} := \coqdocvar{int}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Inductive} \coqdocvar{avltree} :=\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{Leaf} : \coqdocvar{avltree}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{Node} : \coqdocvar{key} \ensuremath{\rightarrow} \coqdocvar{avltree} \ensuremath{\rightarrow} \coqdocvar{avltree} \ensuremath{\rightarrow} \coqdocvar{int} \ensuremath{\rightarrow} \coqdocvar{avltree}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{height} (\coqdocvar{t}:\coqdocvar{avltree}) : \coqdocvar{int} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{t} \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{Leaf} \ensuremath{\Rightarrow} 0\%\coqdocvar{Z} \coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{Node} \coqdocvar{\_} \coqdocvar{\_} \coqdocvar{\_} \coqdocvar{h} \ensuremath{\Rightarrow} \coqdocvar{h}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{create} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{Node} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r} (\coqdocvar{plus} (\coqdocvar{max} (\coqdocvar{height} \coqdocvar{l}) (\coqdocvar{height} \coqdocvar{r})) 1).\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{assert\_false} := \coqdocvar{create}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{balance} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{let} \coqdocvar{hl} := \coqdocvar{height} \coqdocvar{l} \coqdoctac{in}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{let} \coqdocvar{hr} := \coqdocvar{height} \coqdocvar{r} \coqdoctac{in}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{if} \coqdocvar{gt\_le\_dec} \coqdocvar{hl} (\coqdocvar{hr}+2) \coqdockw{then}\coqdoceol
+\coqdocindent{3.00em}
+\coqdockw{match} \coqdocvar{l} \coqdockw{with}\coqdoceol
+\coqdocindent{3.00em}
+\ensuremath{|} \coqdocvar{Leaf} \ensuremath{\Rightarrow} \coqdocvar{assert\_false} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r}\coqdoceol
+\coqdocindent{3.00em}
+\ensuremath{|} \coqdocvar{Node} \coqdocvar{lk} \coqdocvar{ll} \coqdocvar{lr} \coqdocvar{\_} \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{4.00em}
+\coqdockw{if} \coqdocvar{ge\_lt\_dec} (\coqdocvar{height} \coqdocvar{ll}) (\coqdocvar{height} \coqdocvar{lr}) \coqdockw{then}\coqdoceol
+\coqdocindent{5.00em}
+\coqdocvar{create} \coqdocvar{lk} \coqdocvar{ll} (\coqdocvar{create} \coqdocvar{k} \coqdocvar{lr} \coqdocvar{r})\coqdoceol
+\coqdocindent{5.00em}
+\coqdockw{else}\coqdoceol
+\coqdocindent{6.00em}
+\coqdockw{match} \coqdocvar{lr} \coqdockw{with}\coqdoceol
+\coqdocindent{6.00em}
+\ensuremath{|} \coqdocvar{Leaf} \ensuremath{\Rightarrow} \coqdocvar{assert\_false} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r}\coqdoceol
+\coqdocindent{6.00em}
+\ensuremath{|} \coqdocvar{Node} \coqdocvar{lrk} \coqdocvar{lrl} \coqdocvar{lrr} \coqdocvar{\_} \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{8.00em}
+\coqdocvar{create} \coqdocvar{lrk} (\coqdocvar{create} \coqdocvar{lk} \coqdocvar{ll} \coqdocvar{lrl}) (\coqdocvar{create} \coqdocvar{k} \coqdocvar{lrr} \coqdocvar{r})\coqdoceol
+\coqdocindent{6.00em}
+\coqdockw{end}\coqdoceol
+\coqdocindent{3.00em}
+\coqdockw{end}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{else}\coqdoceol
+\coqdocindent{2.00em}
+\coqdockw{if} \coqdocvar{gt\_le\_dec} \coqdocvar{hr} (\coqdocvar{hl}+2) \coqdockw{then}\coqdoceol
+\coqdocindent{3.00em}
+\coqdockw{match} \coqdocvar{r} \coqdockw{with}\coqdoceol
+\coqdocindent{4.00em}
+\ensuremath{|} \coqdocvar{Leaf} \ensuremath{\Rightarrow} \coqdocvar{assert\_false} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r}\coqdoceol
+\coqdocindent{4.00em}
+\ensuremath{|} \coqdocvar{Node} \coqdocvar{rk} \coqdocvar{rl} \coqdocvar{rr} \coqdocvar{\_} \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{5.00em}
+\coqdockw{if} \coqdocvar{ge\_lt\_dec} (\coqdocvar{height} \coqdocvar{rr}) (\coqdocvar{height} \coqdocvar{rl}) \coqdockw{then}\coqdoceol
+\coqdocindent{6.00em}
+\coqdocvar{create} \coqdocvar{rk} (\coqdocvar{create} \coqdocvar{k} \coqdocvar{l} \coqdocvar{rl}) \coqdocvar{rr}\coqdoceol
+\coqdocindent{5.00em}
+\coqdockw{else}\coqdoceol
+\coqdocindent{6.00em}
+\coqdockw{match} \coqdocvar{rl} \coqdockw{with}\coqdoceol
+\coqdocindent{7.00em}
+\ensuremath{|} \coqdocvar{Leaf} \ensuremath{\Rightarrow} \coqdocvar{assert\_false} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r}\coqdoceol
+\coqdocindent{7.00em}
+\ensuremath{|} \coqdocvar{Node} \coqdocvar{rlk} \coqdocvar{rll} \coqdocvar{rlr} \coqdocvar{\_} \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{9.00em}
+\coqdocvar{create} \coqdocvar{rlk} (\coqdocvar{create} \coqdocvar{k} \coqdocvar{l} \coqdocvar{rll}) (\coqdocvar{create} \coqdocvar{rk} \coqdocvar{rlr} \coqdocvar{rr})\coqdoceol
+\coqdocindent{6.00em}
+\coqdockw{end}\coqdoceol
+\coqdocindent{3.00em}
+\coqdockw{end}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{else}\coqdoceol
+\coqdocindent{2.00em}
+\coqdocvar{create} \coqdocvar{k} \coqdocvar{l} \coqdocvar{r}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{insert} (\coqdocvar{k}:\coqdocvar{key}) (\coqdocvar{t}:\coqdocvar{avltree}) :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{t} \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{Leaf} \ensuremath{\Rightarrow} \coqdocvar{Node} \coqdocvar{k} \coqdocvar{Leaf} \coqdocvar{Leaf} \coqdocvar{\_1}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{Node} \coqdocvar{k'} \coqdocvar{l} \coqdocvar{r} \coqdocvar{h} \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{4.00em}
+\coqdockw{match} (\coqdocvar{k} ?= \coqdocvar{k'})\%\coqdocvar{Z} \coqdockw{with}\coqdoceol
+\coqdocindent{5.00em}
+\ensuremath{|} \coqdocvar{Lt} \ensuremath{\Rightarrow} \coqdocvar{balance} \coqdocvar{k'} (\coqdocvar{insert} \coqdocvar{k} \coqdocvar{l}) \coqdocvar{r}\coqdoceol
+\coqdocindent{5.00em}
+\ensuremath{|} \coqdocvar{Eq} \ensuremath{\Rightarrow} \coqdocvar{Node} \coqdocvar{k'} \coqdocvar{l} \coqdocvar{r} \coqdocvar{h}\coqdoceol
+\coqdocindent{5.00em}
+\ensuremath{|} \coqdocvar{Gt} \ensuremath{\Rightarrow} \coqdocvar{balance} \coqdocvar{k'} \coqdocvar{l} (\coqdocvar{insert} \coqdocvar{k} \coqdocvar{r})\coqdoceol
+\coqdocindent{4.00em}
+\coqdockw{end}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{x} := \coqdocvar{insert} \coqdocvar{\_1} \coqdocvar{Leaf}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{y} := \coqdocvar{insert} \coqdocvar{\_2} \coqdocvar{x}.\coqdoceol
+\end{coqdoccode}
+\end{document}

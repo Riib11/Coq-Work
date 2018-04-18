@@ -8,4 +8,3 @@ Proof.
   intros n.
   exact (eq_refl n).
 Qed.
-

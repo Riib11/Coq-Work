@@ -1,0 +1,65 @@
+DIGEST f2611448ff1695e7c0b814b411541375
+FTop.inductive
+ind 10:13 <> unit
+constr 28:29 <> tt
+R30:30 Top.inductive <> unit ind
+prf 41:54 <> unit_singleton
+R69:72 Top.inductive <> unit ind
+R76:78 Coq.Init.Logic <> :type_scope:x_'='_x not
+R75:75 Top.inductive <> x var
+R79:80 Top.inductive <> tt constr
+ind 129:132 <> bool
+constr 147:150 <> true
+constr 156:160 <> false
+R151:151 Top.inductive <> bool ind
+R161:161 Top.inductive <> bool ind
+ind 174:176 <> nat
+constr 191:191 <> O
+constr 203:203 <> S
+R195:197 Top.inductive <> nat ind
+R210:213 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R214:216 Top.inductive <> nat ind
+R207:209 Top.inductive <> nat ind
+def 231:237 <> is_zero
+R244:246 Top.inductive <> nat ind
+R251:254 Top.inductive <> bool ind
+R267:267 Top.inductive <> n var
+R280:280 Top.inductive <> O constr
+R285:288 Top.inductive <> true constr
+R296:296 Top.inductive <> S constr
+R303:307 Top.inductive <> false constr
+def 328:331 <> pred
+R338:340 Top.inductive <> nat ind
+R345:347 Top.inductive <> nat ind
+R360:360 Top.inductive <> n var
+R373:373 Top.inductive <> O constr
+R378:378 Top.inductive <> O constr
+R386:386 Top.inductive <> S constr
+def 414:417 <> plus
+R426:428 Top.inductive <> nat ind
+R433:435 Top.inductive <> nat ind
+R448:448 Top.inductive <> n var
+R461:461 Top.inductive <> O constr
+R466:466 Top.inductive <> m var
+R474:474 Top.inductive <> S constr
+R482:482 Top.inductive <> S constr
+R485:488 Top.inductive <> plus def
+R493:493 Top.inductive <> m var
+prf 512:519 <> O_plus_n
+R534:536 Top.inductive <> nat ind
+R547:549 Coq.Init.Logic <> :type_scope:x_'='_x not
+R539:542 Top.inductive <> plus def
+R546:546 Top.inductive <> n var
+R544:544 Top.inductive <> O constr
+R550:550 Top.inductive <> n var
+prf 600:604 <> S_inj
+R621:623 Top.inductive <> nat ind
+R635:638 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R640:642 Coq.Init.Logic <> :type_scope:x_'='_x not
+R639:639 Top.inductive <> n var
+R643:643 Top.inductive <> m var
+R629:631 Coq.Init.Logic <> :type_scope:x_'='_x not
+R626:626 Top.inductive <> S constr
+R628:628 Top.inductive <> n var
+R632:632 Top.inductive <> S constr
+R634:634 Top.inductive <> m var
