@@ -4,32 +4,48 @@
  |
  +–––––––––––––––––––––––––––––––––––*)
 
-
 (* Basic Types *)
 Axiom Point : Set.
+Axiom origin : Point.
 
-(* Axiom 1 *)
+(*
+ * Axiom 1: The Segment
+ *)
 Inductive Segment : Set :=
-  segment_from_points : Point -> Point -> Segment.
+| segment_from_points : Point -> Point -> Segment.
 
-(* Axiom 2 *)
+(* The Distance measure*)
+Axiom Distance : Set.
+Axiom zero_distance : Distance.
+Axiom distance_between : Segment -> Distance.
+
+(*
+ * Axiom 2: The Line
+ *)
 Inductive Line : Set :=
-  line_from_segment : Segment -> Line.
+| line_from_segment : Segment -> Line.
 
-(* Axiom 3 *)
+(*
+ * Axiom 3: The Circle
+ *)
 Inductive Circle : Set :=
-  circle_from_points : Point -> Point -> Circle.
+| circle_from_segment : Segment -> Circle.
 
-(* Axiom 4 *)
+(*
+ * Axiom 4: The Right Angle
+ *)
 Axiom Angle : Set.
-Axiom angle_between : Line -> Line -> Angle.
 Axiom right : Angle.
+
+(* The Angle measure *)
+Axiom angle_between : Line -> Line -> Angle.
 
 Axiom lines_angles_equality:
   forall l l' l'' : Line,
   angle_between l l'  = angle_between l l''
   -> l' = l''.
 
+(* example of lines angles equality *)
 Proposition lines_right_angles_equality:
   forall l l' l'',
   angle_between l l'  = right

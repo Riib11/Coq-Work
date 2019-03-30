@@ -1,0 +1,3 @@
+Theorem lt_le : forall n p : nat, n < p -> n <= p.
+Proof.
+  
